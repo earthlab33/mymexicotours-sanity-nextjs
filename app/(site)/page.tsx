@@ -6,20 +6,22 @@ import Link from 'next/link';
 export default async function Home() {
   const projects = await getProjects();
   return (
-    <div>
+    <main className="grid mt-16">
       <div className="grid overflow-hidden sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 grid-rows-2 gap-0 grid-flow-row w-auto 2xl:h-auto 2xl:square">
      {projects.map((project) => (
+           <div className="box" key={project._id}>
+           <div className="gridimg square lg:aspect-[4/3] sm:aspect-[4/3]">
        <Link 
         href={`/projects/${project.slug}`}
        key={project._id} 
-       className="border-2 border-gray-500 rounded-lg p-1 hover:scale-105 hover:border-blue-500 transition">
+       className="relative block bg-gray-900 group">
         {project.image && (
           <Image
             src={project.image}
             alt={project.name}
             width={750}
             height={300}
-            className="object-cover rounded-t-lg"
+            className="block h-auto w-full absolute square inset-0 object-cover group-hover:opacity-50"
           />
         )}
        {/* <div className="mt-2 font-extrabold bg-gradient-to-r from-orange-500 via-red-500 to-purple-600 bg-clip-text text-transparent">{project.name}</div>  */}
@@ -35,8 +37,10 @@ export default async function Home() {
                     </div>
                   </div>
     </Link>
+    </div>
+    </div>
       ))}
       </div>
-    </div>
+    </main>
   )
 }

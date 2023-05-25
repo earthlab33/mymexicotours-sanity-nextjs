@@ -16,9 +16,13 @@ export default function Sidebar() {
       >
         <h2 className="text-2xl text-white">Sidebar Menu</h2>
         <ul className="mt-10">
-          <li className="text-white">Home</li>
-          <li className="text-white">About</li>
-          <li className="text-white">Contact</li>
+          <li className="text-white">
+          <Link href="/" passHref>
+            Home
+             </Link>
+            </li>
+          <li className="text-white"><Link href="/about" passHref>About</Link></li>
+          <li className="text-white"><Link href="/contact" passHref>Contact</Link> </li>
           <li className="text-white">
             <Link href="/login" passHref>
               Log In
