@@ -1,4 +1,5 @@
-import { getPage } from '../../../sanity/sanity-utils';
+// import { getPage } from '../../../sanity/sanity-utils';
+import { getPage } from "@/sanity/sanity-utils";
 import { PortableText } from '@portabletext/react';
 
 type Props = {
