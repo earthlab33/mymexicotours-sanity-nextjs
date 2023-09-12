@@ -6,6 +6,7 @@ type Props = {
     params: { slug: string }
 }
 
+export const dynamic = 'force-dynamic'
 export default async function Page({params}: Props) {
   const page = await getPage(params.slug);
 
