@@ -71,7 +71,7 @@ if (vista) {
           </Link>
           </div>
           <h1 className="text-red-700 text-2xl font-extrabold text-center mt-12">{vista.title}</h1>
-          <div className="text-center mt-5 text-lg text-black">
+          <div className="text-center mt-5 text-lg text-white">
                   <p>{vista.description}</p>
               </div>
           <div className="xl:w-[992px] lg:w-[992px] md:w-768 sm:w-full h-auto mx-auto mt-10">

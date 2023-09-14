@@ -24,7 +24,7 @@ export default function Vista({ vista }: VistaProps) {
   return (
     <Link href={`/vista/${vista.id}`} passHref className="relative block w-full h-48 group cover fill"> 
         <Image 
-          src={vista.fields.images[0].thumbnails.large.url} 
+          src={vista.fields.thumb[0].thumbnails.large.url} 
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           alt={vista.fields.title}

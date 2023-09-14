@@ -9,8 +9,8 @@ import {
   MdOutlineLogin,
 } from "react-icons/md";
 import {FaHome} from "react-icons/fa";
-import {GrContactInfo} from "react-icons/gr";
 import { BsChevronDown, BsCalendarRange, BsPencil } from "react-icons/bs";
+import {LuContact2} from "react-icons/lu";
 import { AiOutlineUser, AiOutlineHeart, AiOutlineHome, AiOutlineStar } from "react-icons/ai";
 import Link from "next/link";
 
@@ -23,8 +23,8 @@ export default function Sidebar() {
       spacing: true,
     },
     {
-      title: "About",
-      href: "/about",
+      title: "About Betsy",
+      href: "/betsy",
       icon: AiOutlineStar,
       spacing: false,
       submenus: false,
@@ -50,7 +50,7 @@ export default function Sidebar() {
     {
       title: "Contact",
       href: "/contact",
-      icon: GrContactInfo,
+      icon: LuContact2,
       submenus: false,
       submenuItems: []
     },
@@ -68,9 +68,15 @@ export default function Sidebar() {
   const drawerRef = useRef<HTMLDivElement | null>(null);
 
 
+  const hamburgerRef = useRef(null);
+
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (drawerRef.current && !drawerRef.current.contains(event.target as Node)) {
+      if (
+        drawerRef.current && 
+        !drawerRef.current.contains(event.target as Node) &&
+        (hamburgerRef.current && !hamburgerRef.current.contains(event.target as Node))
+      ) {
         setIsOpen(false);
       }
     }
@@ -79,18 +85,18 @@ export default function Sidebar() {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [drawerRef, setIsOpen]);
+  }, [drawerRef, setIsOpen, hamburgerRef]);
 
   return (
     <>
-      <Hamburger toggled={isOpen} toggle={setIsOpen} color="#ffffff" /><span>MENU</span>
+      <div ref={hamburgerRef}>
+        <Hamburger toggled={isOpen} toggle={setIsOpen} color="#ffffff" /><span>MENU</span>
+      </div>
       <div
         ref={drawerRef}
-        className={`top-25 right-0 fixed bg-black w-[35vw] h-screen p-10 ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        } ease-in-out duration-300`}
+        className={`top-25 right-0 fixed bg-black w-[75vw] lg:w-[35vw] h-screen p-10 ${isOpen ? "translate-x-0" : "translate-x-full"} ease-in-out duration-300`}
       >
-        <div className="bg-black w-[35vw]">
+        <div className="bg-black">
           <ul className="pt-2">
             {menus.map((menu, index) => (
               <>

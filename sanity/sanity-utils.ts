@@ -50,7 +50,17 @@ export async function getPage(slug: string): Promise<Page> {
       _createdAt,
       title,
       "slug": slug.current,
-      content
+      content,
+      content2,
+      content3,
+      content4,
+      "image1": image1.asset->url,
+      image1Alt,
+      "image2": image2.asset->url,
+      image2Alt,
+      mediaUrl,
+      buttonUrl,
+      buttonText
     }`,
     { slug }
   )

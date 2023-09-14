@@ -35,7 +35,7 @@ export default function Vistas() {
                 Vistas 
               </h1>
           </div>
-          <div className="pt-20 px-40">
+          <div className="pt-20 px-[15vw] lg:px-40">
           <div className="grid lg:grid-cols-4 sm:grid-cols-3 xs:grid-cols-2 gap-0">
             {vistas.map((vista, index) => (
     <Vista key={index} vista={vista} />

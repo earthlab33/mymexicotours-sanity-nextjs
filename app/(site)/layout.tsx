@@ -4,6 +4,7 @@ import { getPages } from '../../sanity/sanity-utils'
 import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar'
 import Link from 'next/link'
+import Footer from './components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -39,11 +40,8 @@ export default async function RootLayout({
           <Navbar />
         </header>
         <main className="py-20">{children}</main>
-
-        
-        
-        
         </body>
+        <Footer />
     </html>
   )
 }

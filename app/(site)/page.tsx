@@ -12,7 +12,7 @@ export default async function Home() {
            <div className="box" key={project._id}>
            <div className="gridimg square lg:aspect-[4/3] sm:aspect-[4/3]">
        <Link 
-        href={`/projects/${project.slug}`}
+        href={`${project.url}`}
        key={project._id} 
        className="relative block bg-gray-900 group">
         {project.image && (
