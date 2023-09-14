@@ -68,24 +68,26 @@ export default function Sidebar() {
   const drawerRef = useRef<HTMLDivElement | null>(null);
 
 
-  const hamburgerRef = useRef(null);
+  const hamburgerRef = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (
-        drawerRef.current && 
-        !drawerRef.current.contains(event.target as Node) &&
-        (hamburgerRef.current && !hamburgerRef.current.contains(event.target as Node))
-      ) {
-        setIsOpen(false);
-      }
+
+useEffect(() => {
+  function handleClickOutside(event: MouseEvent) {
+    if (
+      drawerRef.current && 
+      !drawerRef.current.contains(event.target as Node) &&
+      (hamburgerRef.current && !hamburgerRef.current.contains(event.target as Node))
+    ) {
+      setIsOpen(false);
     }
-  
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [drawerRef, setIsOpen, hamburgerRef]);
+  }
+
+  document.addEventListener("mousedown", handleClickOutside);
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, [drawerRef, setIsOpen, hamburgerRef]);
+
 
   return (
     <>
