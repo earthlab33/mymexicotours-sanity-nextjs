@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 interface VistaFields {
   title: string;
-  images: {
+  thumb: {
     thumbnails: {
       large: {
         url: string;
