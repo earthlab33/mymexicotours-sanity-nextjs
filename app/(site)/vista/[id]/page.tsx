@@ -70,7 +70,7 @@ if (vista) {
             ← Back to Vistas
           </Link>
           </div>
-          <h1 className="text-red-700 text-2xl font-extrabold text-center mt-12">{vista.title}</h1>
+          <h1 className="text-slate-100 text-2xl font-extrabold text-center mt-12">{vista.title}</h1>
           <div className="text-center mt-5 text-lg text-white">
                   <p>{vista.description}</p>
               </div>

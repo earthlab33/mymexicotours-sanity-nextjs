@@ -26,7 +26,7 @@ export default async function Page({params}: Props) {
 
 return (
     <div className="max-w-6xl pt-10 mx-auto sm:px-3.5 md:px-20">
-        {page.title && (<h1 className="text-red-700 text-2xl font-extrabold text-center mt-12">{page.title}</h1>)}
+        {page.title && (<h1 className="text-slate-100 text-2xl font-extrabold text-center mt-12">{page.title}</h1>)}
         {page.image1 && <div className="mt-5 w-1/2 float-left px-12 py-2"><Image src={page.image1} alt={page.image1Alt} width={300} height={Math.round(300 / .75)}  /></div>}
         {page.content && (<div className={`mt-5 float-left text-lg text-white ${page.image1 ? 'w-1/2' : ''}`}><PortableText value={page.content} /></div>)}
         <div className="clear-both"></div>

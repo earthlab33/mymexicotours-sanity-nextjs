@@ -7,7 +7,7 @@ export default async function Home() {
   const projects = await getProjects();
   return (
     <main className="grid mt-16">
-      <div className="grid overflow-hidden sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 grid-rows-2 gap-0 grid-flow-row w-auto 2xl:h-auto 2xl:square">
+      <div className="grid overflow-hidden grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 grid-rows-2 gap-0 grid-flow-row w-auto 2xl:h-auto 2xl:square">
      {projects.map((project) => (
            <div className="box" key={project._id}>
            <div className="gridimg square lg:aspect-[4/3] sm:aspect-[4/3]">

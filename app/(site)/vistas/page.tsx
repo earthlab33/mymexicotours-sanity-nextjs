@@ -31,7 +31,7 @@ export default function Vistas() {
           <div className="mt-12">
             <div className="text-center px-20">
             </div>
-              <h1 className="text-red-700 text-2xl font-extrabold text-center mt-12">
+              <h1 className="text-slate-100 text-2xl font-extrabold text-center mt-12">
                 Vistas 
               </h1>
           </div>
