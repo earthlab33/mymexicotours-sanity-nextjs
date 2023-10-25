@@ -16,5 +16,6 @@ export type Tour = {
     image2Alt: string,
     mediaUrl: string,
     buttonUrl: string,
-    buttonText: string
+    buttonText: string,
+    excerpt: string
 };
