@@ -10,10 +10,10 @@ export default function Footer() {
       <Link href="/" passHref>
     <Image
       src="https://mymexicotours.s3.amazonaws.com/new_graphics/mmt-logo.png"
-      width={100}
-      height={100}
+      width={200}
+      height={150}
       alt="My Mexico Tours Icon"
-      className="mx-auto mt-[-53px] rounded-full"
+      className="mx-auto mt-[-45px]"
     />
 </Link>
       <div className="container mx-auto flex flex-wrap justify-between px-4">
@@ -21,7 +21,7 @@ export default function Footer() {
         <h2 className="text-slate-50 mt-4 mb-4">Quick Links:</h2>
           <ul className="space-y-2">
             <li><Link href="/about" passHref className="text-slate-50">About</Link></li>
-            <li><Link href="/yoga" passHref className="text-slate-50">Classes</Link></li>
+            <li><Link href="/classes" passHref className="text-slate-50">Classes</Link></li>
             <li><Link href="/faq" passHref className="text-slate-50">FAQ</Link></li>
             <li><Link href="/blog" passHref className="text-slate-50">Blog</Link></li>
             <li><Link href="/contact" passHref className="text-slate-50">Contact</Link></li>

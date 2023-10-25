@@ -24,7 +24,7 @@ export default function Tours() {
             {tours.map((tour) => (
                 <div className="max-w-sm rounded drop-shadow-lg hover:drop-shadow-xl border" key={tour._id}>
                     {tour.image1 && (
-                        <Link href={`/blog/${tour.slug}`} rel="noreferrer" passHref>
+                        <Link href={`/tours/${tour.slug}`} rel="noreferrer" passHref>
                             <Image className="w-full" src={tour.image1}
                             alt={tour.title}
                             width={350}
@@ -33,12 +33,12 @@ export default function Tours() {
                     )}
                     <div className="px-6 py-4">
                         <div className="font-bold text-xl mb-2">{tour.title}</div>
-                        <div className="text-gray-700 text-base overflow-hidden">
+                        <div className="text-slate-100 text-base overflow-hidden">
                             {tour.excerpt}
                         </div>
                     </div>
                     <div className="px-6 pt-4 pb-2">
-                        <Link href={`/blog/${tour.slug}`} rel="noreferrer" passHref className="px-3 py-2 border border-transparent text-sm font-medium rounded-md text-grey-100">
+                        <Link href={`/tours/${tour.slug}`} rel="noreferrer" passHref className="px-3 py-2 border border-transparent text-sm font-medium rounded-md text-grey-100">
                             Read More ...
                         </Link>
                     </div>

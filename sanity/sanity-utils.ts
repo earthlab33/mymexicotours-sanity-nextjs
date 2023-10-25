@@ -75,8 +75,9 @@ export async function getTours(): Promise<Tour[]> {
       _id,
       _createdAt,
       title,
-      "slug": slug.current
+      "slug": slug.current,
       upcoming,
+      "excerpt": array::join(string::split((pt::text(content)), "")[0..255], "") + "..."
     }`
   )
 }
@@ -92,6 +93,7 @@ export async function getTour(slug: string): Promise<Tour> {
       content2,
       content3,
       content4,
+      "excerpt": array::join(string::split((pt::text(content)), "")[0..255], "") + "...",
       "image1": image1.asset->url,
       image1Alt,
       "image2": image2.asset->url,
