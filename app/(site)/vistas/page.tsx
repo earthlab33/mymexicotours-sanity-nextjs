@@ -43,12 +43,12 @@ export default function Vistas() {
   </div>
   {loading && (
               <RingLoader
-                color="#8f7e7e"
+                color="#eccf10"
                 loading={loading}
                 size={150}
                 aria-label="Loading Spinner"
                 data-testid="loader"
-                className="content-center"
+                className="mx-auto my-10"
               />
             )}
   </div>
