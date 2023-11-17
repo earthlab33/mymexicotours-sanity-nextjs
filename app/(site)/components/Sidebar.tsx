@@ -31,8 +31,8 @@ export default function Sidebar() {
       submenuItems: [],
     },
     {
-      title: "Vistas",
-      href: "/vistas",
+      title: "Photos",
+      href: "/photos",
       icon: AiOutlineStar,
       spacing: false,
       submenus: false,

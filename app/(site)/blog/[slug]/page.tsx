@@ -35,7 +35,7 @@ return (
 )}
         <div className="mt-5 text-lg text-slate-100"><PortableText value={post.content} /></div>
         {post.image2 && <div className="mt-5 float-left px-12 py-2"><Image src={post.image2} alt={post.image2Alt} width={300} height={300} /></div>}
-        {post.content2 && (<div className={`mt-5 text-lg text-slate-100 ${post.image2 ? 'w-1/2' : ''}`}><PortableText value={post.content2} /></div>)}
+        {post.content2 && (<div className={`mt-5 text-lg text-slate-100 ${post.image2 ? 'float-left' : ''}`}><PortableText value={post.content2} /></div>)}
          {post.content3 && <div className="mt-5 text-lg text-slate-100"><PortableText value={post.content3} /></div>}   
          {post.content4 && <div className="mt-5 text-lg text-slate-100"><PortableText value={post.content4} /></div>}   
          {post.buttonUrl && <div className="text-center"><Link href={post.buttonUrl} className="bg-red-700 hover:bg-red-500 drop-shadow-md text-white px-4 py-2 mt-6 rounded inline-block">

@@ -143,3 +143,36 @@ export async function getPost(slug: string): Promise<Post> {
     { slug }
   )
 }
+
+export async function getPhotos(): Promise<Photo[]> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "photo"]{
+      _id,
+      _createdAt,
+      title,
+      "slug": slug.current,
+      "image1": image1.asset->url,
+      content,
+    }`
+  )
+}
+
+export async function getPhoto(slug: string): Promise<Photo> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "photo" && slug.current == $slug][0]{
+      _id,
+      _createdAt,
+      title,
+      "slug": slug.current,
+      content,
+      content2,
+      "image1": image1.asset->url,
+      "image2": image2.asset->url,
+      "image1Alt": image1.alt,
+      "image2Alt": image2.alt,
+      "buttonUrl": buttonUrl,
+      "buttonText": buttonText,
+    }`,
+    { slug }
+  )
+}
