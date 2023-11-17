@@ -4,6 +4,7 @@ import clientConfig from './config/client-config'
 import { Page } from "@/types/Page";
 import { Tour } from "@/types/Tour";
 import { Post } from "@/types/Post";
+import { Photo } from "@/types/Photo";
 
 
 export async function getProjects(): Promise<Project[]> {
