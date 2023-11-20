@@ -31,6 +31,14 @@ export default function Sidebar() {
       submenuItems: [],
     },
     {
+      title: "Tours",
+      href: "/tours",
+      icon: AiOutlineHeart,
+      spacing: false,
+      submenus: false,
+      submenuItems: [],
+    },
+    {
       title: "Photos",
       href: "/photos",
       icon: AiOutlineStar,

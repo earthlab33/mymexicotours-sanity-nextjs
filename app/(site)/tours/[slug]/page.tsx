@@ -17,13 +17,13 @@ export default async function Tourpost({params}: Props) {
   
 
 return (
-    <div className="max-w-6xl pt-10 mx-auto sm:px-3.5 md:px-20">
+    <div className="max-w-6xl pt-10 mx-auto px-3.5 md:px-20">
                   <Link href="/tours/">
             ← Back to Tour Index
           </Link>
         <h1 className="text-slate-100 text-2xl font-extrabold text-center mt-12">{tour.title}</h1>
         {tour.image1 && (
-  <div className="mt-5 w-[700px] mx-auto px-12 py-2">
+  <div className="mt-5 w-auto mx-auto px-12 py-2">
     <Image 
       src={tour.image1} 
       alt={tour.image1Alt} 
