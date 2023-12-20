@@ -13,7 +13,7 @@ import {Media, Video } from '@vidstack/player-react';
 
 
 type Props = {
-    params: { slug: string, title: string, mediaUrl: string, buttonUrl: string, buttonText: string, content: PortableTextBlock[], content2: PortableTextBlock[], content3: PortableTextBlock[], content4: PortableTextBlock[], image1: string, image1Alt: string, image2: string, image2Alt: string }
+    params: { slug: string, title: string, mediaUrl: string, buttonUrl: string, buttonText: string, content: PortableTextBlock[], content2: PortableTextBlock[], content3: PortableTextBlock[], content4: PortableTextBlock[], content5: PortableTextBlock[], content6: PortableTextBlock[], image1: string, image1Alt: string, image2: string, image2Alt: string, image3: string, image3Alt: string, image4: string, image4Alt: string, image5: string, image5Alt: string, image6: string, image6Alt: string }
 }
 
 export default async function Page({params}: Props) {
@@ -30,11 +30,21 @@ return (
         {page.image1 && <div className="mt-5 w-1/2 float-left px-12 py-2"><Image src={page.image1} alt={page.image1Alt} width={300} height={Math.round(300 / .75)}  /></div>}
         {page.content && (<div className={`mt-5 text-left text-lg text-white ${page.image1 ? 'w-full' : ''}`}><PortableText value={page.content} /></div>)}
         <div className="clear-both"></div>
-        {page.content2 && (<div className={`mt-5 float-left text-lg text-white ${page.image2 ? 'w-1/2' : ''}`}><PortableText value={page.content2} /></div>)}
+        {page.content2 && (<div className={`mt-5 text-left text-lg text-white ${page.image2 ? 'w-full' : ''}`}><PortableText value={page.content2} /></div>)}
         {page.image2 && <div className="mt-5 float-left px-12 py-2"><Image src={page.image2} alt={page.image2Alt} width={300} height={Math.round(300 / .75)}  /></div>}
         <div className="clear-both"></div>
-         {page.content3 && <div className="mt-5 text-lg text-white"><PortableText value={page.content3} /></div>}  
-         {page.content4 && <div className="mt-5 text-lg text-white"><PortableText value={page.content4} /></div>}  
+        {page.content3 && (<div className={`mt-5 text-left text-lg text-white ${page.image3 ? 'w-full' : ''}`}><PortableText value={page.content3} /></div>)}
+        {page.image3 && <div className="mt-5 float-left px-12 py-2"><Image src={page.image3} alt={page.image3Alt} width={300} height={Math.round(300 / .75)}  /></div>}
+        <div className="clear-both"></div>
+        {page.content4 && (<div className={`mt-5 text-left text-lg text-white ${page.image4 ? 'w-full' : ''}`}><PortableText value={page.content4} /></div>)}
+        {page.image4 && <div className="mt-5 float-left px-12 py-2"><Image src={page.image4} alt={page.image4Alt} width={300} height={Math.round(300 / .75)}  /></div>}
+        <div className="clear-both"></div>
+        {page.content5 && (<div className={`mt-5 text-left text-lg text-white ${page.image5 ? 'w-full' : ''}`}><PortableText value={page.content5} /></div>)}
+        {page.image5 && <div className="mt-5 float-left px-12 py-2"><Image src={page.image5} alt={page.image5Alt} width={300} height={Math.round(300 / .75)}  /></div>}
+        <div className="clear-both"></div>
+        {page.content6 && (<div className={`mt-5 text-left text-lg text-white ${page.image6 ? 'w-full' : ''}`}><PortableText value={page.content6} /></div>)}
+        {page.image6 && <div className="mt-5 float-left px-12 py-2"><Image src={page.image6} alt={page.image6Alt} width={300} height={Math.round(300 / .75)}  /></div>}
+        <div className="clear-both"></div> 
 
          {page.buttonUrl && <div className="text-center"><Link href={page.buttonUrl} className="bg-red-700 hover:bg-red-500 drop-shadow-md text-white px-4 py-2 mt-6 rounded inline-block">
                             {page.buttonText || 'Click Me'}

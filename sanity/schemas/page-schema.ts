@@ -44,6 +44,58 @@ const page = {
             ]
         },
         {
+            name: 'image3',
+            title: 'Image3',
+            type: 'image',
+            options: { hotspot: true },
+            fields: [
+                {
+                    name: 'alt',
+                    title: 'Alt',
+                    type: 'string',
+                }
+            ]
+        },
+        {
+            name: 'image4',
+            title: 'Image4',
+            type: 'image',
+            options: { hotspot: true },
+            fields: [
+                {
+                    name: 'alt',
+                    title: 'Alt',
+                    type: 'string',
+                }
+            ]
+        },
+        {
+            name: 'image5',
+            title: 'Image5',
+            type: 'image',
+            options: { hotspot: true },
+            fields: [
+                {
+                    name: 'alt',
+                    title: 'Alt',
+                    type: 'string',
+                }
+            ]
+        },
+        {
+            name: 'image6',
+            title: 'Image6',
+            type: 'image',
+            options: { hotspot: true },
+            fields: [
+                {
+                    name: 'alt',
+                    title: 'Alt',
+                    type: 'string',
+                }
+            ]
+        },
+        {
             name: 'content',
             title: 'Content',
             type: 'array',
@@ -64,6 +116,18 @@ const page = {
         {
             name: 'content4',
             title: 'Content4',
+            type: 'array',
+            of: [{ type: 'block' }],
+        },
+        {
+            name: 'content5',
+            title: 'Content5',
+            type: 'array',
+            of: [{ type: 'block' }],
+        },
+        {
+            name: 'content6',
+            title: 'Content6',
             type: 'array',
             of: [{ type: 'block' }],
         },
