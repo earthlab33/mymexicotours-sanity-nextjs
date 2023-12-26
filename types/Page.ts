@@ -9,6 +9,8 @@ export type Page = {
     content2: PortableTextBlock[],
     content3: PortableTextBlock[],
     content4: PortableTextBlock[],
+    content5: PortableTextBlock[],
+    content6: PortableTextBlock[],
     image1: string,
     image1Alt: string,
     image2: string,
