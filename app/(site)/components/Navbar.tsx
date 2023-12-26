@@ -9,9 +9,9 @@ function Navbar() {
       <div className="flex-auto">
         <Link href="/" passHref>
           <Image
-            src="https://mymexicotours.s3.amazonaws.com/new_graphics/mmt-logo.png"
-            width="500"
-            height="43"
+            src="mmt-logo.svg"
+            width="600"
+            height="63"
             className="text-2xl font-bold text-grey-800"
             alt="My Mexico Tours Logo"
           />

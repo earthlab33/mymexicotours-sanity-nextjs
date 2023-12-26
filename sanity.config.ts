@@ -6,7 +6,7 @@ const config = defineConfig({
     projectId: '859n8uf6',
     dataset: "production",
     title: "My Mexico Tours",
-    apiVersion: '2023-05-22',
+    apiVersion: '2023-12-20',
     basePath: '/admin',
     plugins: [deskTool()],
     schema: {types: schemas}

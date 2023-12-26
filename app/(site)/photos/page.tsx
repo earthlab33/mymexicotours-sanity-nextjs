@@ -36,7 +36,7 @@ export default function Photos() {
                             <Image className="w-full" src={photo.image1}
                             alt={photo.title}
                             width={350}
-                            height={300} />
+                            height={350} />
            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"> {/* Title that appears on hover */}
           <span className="text-white bg-black bg-opacity-50 p-2 rounded">
             {photo.title}

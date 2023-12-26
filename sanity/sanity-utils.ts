@@ -1,6 +1,7 @@
-import { createClient, groq } from "next-sanity";
+import { createClient } from "@sanity/client";
+import { groq } from "next-sanity";
 import { Project } from "@/types/Project";
-import clientConfig from './config/client-config'
+import clientConfig from "./config/client-config";
 import { Page } from "@/types/Page";
 import { Tour } from "@/types/Tour";
 import { Post } from "@/types/Post";
