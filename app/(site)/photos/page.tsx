@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { Photo } from "@/types/Photo";
 import { getPhotos } from '@/sanity/sanity-utils';
 import RingLoader from "react-spinners/RingLoader";
-// import data from 'app/api/getLessons/route.ts'
 
 export default function Photos() {
     const [photos, setPhotos] = useState<Photo[]>([]); 
